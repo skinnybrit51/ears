@@ -1,3 +1,3 @@
 module.exports = {
-    sorter: require('./lib/sorter.js')
+    ears: require('./lib/subscriber.js')
 };
