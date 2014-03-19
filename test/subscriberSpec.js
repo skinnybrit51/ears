@@ -71,7 +71,7 @@ describe('Subscriber', function () {
     });
 
     it('Should have "this" to be set to null', function (done) {
-        this.subscriber.on('foo', function (args) {
+        this.subscriber.on('foo', function () {
             expect(this.listeners).to.be.undefined;
             done();
         });
