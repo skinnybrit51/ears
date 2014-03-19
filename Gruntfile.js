@@ -22,7 +22,9 @@ module.exports = function (grunt) {
                     module: true,
                     require: true,
                     it: true,
-                    describe: true
+                    describe: true,
+                    beforeEach: true,
+                    afterEach: true
                 }
             },
             all: ['index.js', 'Gruntfile.js', 'test/**/*.js', 'lib/**/*.js']
