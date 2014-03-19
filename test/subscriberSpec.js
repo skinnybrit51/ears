@@ -78,4 +78,15 @@ describe('Subscriber', function () {
         this.subscriber.trigger('foo');
     });
 
+    it('Should only fire event once', function () {
+        var callback = this.sandbox.spy();
+
+        this.subscriber.one('foo', callback);
+
+        this.subscriber.trigger('foo');
+        this.subscriber.trigger('foo');
+
+        expect(callback.callCount).to.equal(1);
+    });
+
 });
