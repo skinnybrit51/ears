@@ -2,6 +2,21 @@ module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('./package.json'),
+        watchify: {
+            dist: {
+                src: './lib/subscriber.js',
+                dest: './public/ears.js'
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: 'public',
+                    keepalive: true
+                }
+            }
+        },
         simplemocha: {
             options: {
                 timeout: 2000,
@@ -33,8 +48,10 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-jshint2');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-watchify');
 
-    grunt.registerTask('default', ['simplemocha']);
+    grunt.registerTask('default', ['watchify', 'connect']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('lint', ['jshint2']);
 };
