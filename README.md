@@ -8,7 +8,7 @@ Listen to and fire events.
 #### Examples
 
 ````
-var Ears = require('ears');
+var Ears = require('elephant-ears');
 
 var ears = new Ears();
 

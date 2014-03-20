@@ -1,3 +1,1 @@
-module.exports = {
-    ears: require('./lib/subscriber.js')
-};
+module.exports = require('./lib/subscriber.js');

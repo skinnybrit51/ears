@@ -1,7 +1,7 @@
 {
-  "name": "ears",
+  "name": "elephant-ears",
   "description": "Subscribe and trigger events via a namespaced association",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "events",
     "javascript",
