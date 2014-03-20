@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/skinnybrit51/stand-in-order"
+    "url": "https://github.com/skinnybrit51/ears"
   },
   "dependencies": {
     "underscore": "1.6.0"
