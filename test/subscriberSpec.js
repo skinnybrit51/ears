@@ -65,9 +65,10 @@ describe('Subscriber', function () {
         this.subscriber.on('bar', callback);
         this.subscriber.on('foobar', callback);
 
-        this.subscriber.trigger('foo bar foobar');
+        var results = this.subscriber.trigger('foo bar foobar');
 
         expect(callback.callCount).to.equal(3);
+        expect(results).to.have.length(3);
     });
 
     it('Should have "this" to be set to null', function (done) {
@@ -89,4 +90,15 @@ describe('Subscriber', function () {
         expect(callback.callCount).to.equal(1);
     });
 
+    it('Should return a value from a callback', function () {
+
+        this.subscriber.on('foo', function (value) {
+            return value;
+        });
+
+        var value = this.subscriber.trigger('foo', 'bar');
+
+        expect(value).to.equal('bar');
+
+    });
 });

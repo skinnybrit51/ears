@@ -14,11 +14,13 @@ var ears = new Ears();
 
 var callback = function() {
     console.log('Event Fired!');
+    return ha;
 };
 
 ears.on('foo', callback);
 
-ears.trigger('foo');                    // Event Fired!
+var value = ears.trigger('foo');        // Event Fired!
+console.log(value);                     // ha
 
 ears.off('foo');
 
@@ -32,7 +34,8 @@ ears.trigger('foo');                    // nothing happens
 ears.on('foo', callback);
 ears.on('bar', callback);
 
-ears.trigger('foo bar');                // Event Fired!
+var values = ears.trigger('foo bar');   // Event Fired!
                                         // Event Fired!
+console.log(values[0] + value[1]);      // haha
 
 ````
