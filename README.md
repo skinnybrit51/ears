@@ -1,6 +1,8 @@
 ears
 =============
 
+[![NPM version](https://badge.fury.io/js/elephant-ears.svg)](http://badge.fury.io/js/elephant-ears)
+
 #### Description
 
 Listen to and fire events.
