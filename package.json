@@ -1,7 +1,7 @@
 {
   "name": "elephant-ears",
-  "description": "Subscribe and trigger events via a namespaced association",
-  "version": "0.0.3",
+  "description": "Listen to and fire synchronous events.",
+  "version": "0.0.4",
   "keywords": [
     "events",
     "javascript",

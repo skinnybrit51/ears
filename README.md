@@ -5,7 +5,11 @@ ears
 
 #### Description
 
-Listen to and fire events.
+Listen to and fire synchronous events.
+
+#### Installation
+
+````npm install elephant-ears
 
 #### Examples
 
