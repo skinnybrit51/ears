@@ -1,5 +1,4 @@
-ears
-=============
+### elephant-ears
 
 [![NPM version](https://badge.fury.io/js/elephant-ears.svg)](http://badge.fury.io/js/elephant-ears)
 
@@ -9,7 +8,7 @@ Listen to and fire synchronous events.
 
 #### Installation
 
-````npm install elephant-ears
+````npm install elephant-ears````
 
 #### Examples
 
