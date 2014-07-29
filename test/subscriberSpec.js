@@ -101,4 +101,15 @@ describe('Subscriber', function () {
         expect(value).to.equal('bar');
 
     });
+
+    it('Should be able to handle multiple arguments', function (done) {
+        this.subscriber.on('foo', function (arg1, arg2, arg3) {
+            expect(arg1).to.equal('arg1');
+            expect(arg2).to.equal('arg2');
+            expect(arg3).to.equal('arg3');
+            done();
+        });
+
+        this.subscriber.trigger('foo', 'arg1', 'arg2', 'arg3');
+    });
 });

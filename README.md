@@ -17,7 +17,15 @@ var Ears = require('elephant-ears');
 
 var ears = new Ears();
 
-var callback = function() {
+var callback = function(arg1, arg2) {
+    if (arg1 != null) {
+        console.log(arg1);
+    }
+
+    if (arg2 != null) {
+        console.log(arg2);
+    }
+
     console.log('Event Fired!');
     return ha;
 };
@@ -42,5 +50,9 @@ ears.on('bar', callback);
 var values = ears.trigger('foo bar');   // Event Fired!
                                         // Event Fired!
 console.log(values[0] + value[1]);      // haha
+
+ears.trigger('foo', 'arg1', 'arg2');    // arg1
+                                        // arg2
+                                        // Event Fired!
 
 ````
