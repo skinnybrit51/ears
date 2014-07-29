@@ -28,6 +28,6 @@
     "grunt-watchify": "~0.1.0"
   },
   "scripts": {
-    "test": "NODE_PATH=lib grunt test"
+    "test": "NODE_PATH=lib grunt lint test"
   }
 }
