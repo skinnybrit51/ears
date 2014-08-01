@@ -112,4 +112,13 @@ describe('Subscriber', function () {
 
         this.subscriber.trigger('foo', 'arg1', 'arg2', 'arg3');
     });
+
+    it('Add a namespace to event names', function (done) {
+        var namespace = 'namespace';
+        var subscriber = new Subscriber(namespace);
+        subscriber.on(namespace + '.foo', function () {
+            done();
+        });
+        subscriber.trigger('foo');
+    });
 });

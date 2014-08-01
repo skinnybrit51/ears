@@ -54,5 +54,12 @@ console.log(values[0] + value[1]);      // haha
 ears.trigger('foo', 'arg1', 'arg2');    // arg1
                                         // arg2
                                         // Event Fired!
+                                        
+// add a namespace
+ears = new Ears('myNameSpace');
+ears.on('myNameSpace.change', function() {
+    console.log('namespace event fired');
+});
+ears.trigger('change');                 // namespace event fired
 
 ````

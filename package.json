@@ -1,7 +1,7 @@
 {
   "name": "elephant-ears",
   "description": "Listen to and fire synchronous events.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "events",
     "javascript",
