@@ -102,6 +102,14 @@ describe('Subscriber', function () {
 
     });
 
+    it('Should return null for empty callback', function () {
+
+        var value = this.subscriber.trigger('foo', 'bar');
+
+        expect(value).to.equal(null);
+
+    });
+
     it('Should be able to handle multiple arguments', function (done) {
         this.subscriber.on('foo', function (arg1, arg2, arg3) {
             expect(arg1).to.equal('arg1');
